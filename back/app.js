@@ -8,7 +8,7 @@ const { Server } = require("socket.io");
 var app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, { 
-    cors:{ origin:'*'}
+    cors:{ origin:'https://paneladmin-sandy.vercel.app'}
  });
 
 io.on("connection", (socket) => {
