@@ -19,7 +19,7 @@ const httpServer = createServer(app);
 
 
 const io = new Server(httpServer, { 
-    cors:{origin: 'https://paneladmin-sandy.vercel.app'}
+    cors:{origin: '*' }
    
  });
 //origin:'https://paneladmin-sandy.vercel.app'
@@ -54,7 +54,7 @@ httpServer.listen(port,function(){
 
 
 app.use((req,res,next) =>{
-    res.header('Access-Control-Allow-Origin','https://paneladmin-sandy.vercel.app');
+    res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers','Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Access-Control-Allow-Request-Method');
     res.header('Access-Control-Allow-Methods','GET, PUT, POST, DELETE,OPTIONS');
     res.header('Allow','GET, PUT, POST, DELETE,OPTIONS');
